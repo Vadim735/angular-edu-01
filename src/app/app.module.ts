@@ -9,6 +9,7 @@ import { MyDerictiveDirective } from './my-derictive.directive';
 import { FooterComponent } from './footer/footer.component';
 import { GameComponent } from './game/game.component';
 import { BtnactionComponent } from './btnaction/btnaction.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BtnactionComponent } from './btnaction/btnaction.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

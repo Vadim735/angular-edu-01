@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 
 @Injectable({
@@ -11,8 +12,8 @@ export class MyServiceService {
 
   }
 
-  getCapital() {
+  getCapital(): Observable<any> {
 
-    return this.http.get("https://restcountries.eu/rest/v2/alpha/co");
+    return this.http.get<any>("https://restcountries.eu/rest/v2/alpha/co");
   }
 }
